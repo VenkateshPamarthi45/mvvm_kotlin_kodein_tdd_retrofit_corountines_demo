@@ -5,5 +5,7 @@ This android project helps to understand how to create MVVM architecture project
 <li>Kodein - Dependency Injection for Java, Kotlin</li>
 <li>Retrofit - Network Layer</li>
 <li>Test Driven Development - How to write test cases before writing code and making it pass</li>
+<li>Espresso  - UI related test cases</li>
+<li>JUnit  - unit test cases</li>
 
 
