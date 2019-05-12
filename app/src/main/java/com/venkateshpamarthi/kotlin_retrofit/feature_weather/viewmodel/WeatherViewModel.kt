@@ -8,15 +8,15 @@ import kotlinx.coroutines.*
 
 class WeatherViewModel(private val weatherRepository: WeatherRepository) : ViewModel() {
 
-    private val popularMoviesLiveData = MutableLiveData<ResponseModel>()
+    private val weatherLiveData = MutableLiveData<ResponseModel>()
 
     fun fetchWeather(countryCode: String):MutableLiveData<ResponseModel>{
         CoroutineScope(Dispatchers.IO).launch{
             val result = weatherRepository.getWeatherDetails(countryCode)
             withContext(Dispatchers.Main){
-                popularMoviesLiveData.postValue(result)
+                weatherLiveData.postValue(result)
             }
         }
-        return popularMoviesLiveData
+        return weatherLiveData
     }
 }
